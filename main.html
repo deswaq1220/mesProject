@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMART MES MAIN</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+ <div id="wrap">
+  <nav>
+    <button onclick="">HOME</button>
+    <ul id="business">
+      <span class="title">영업관리</span>
+      <li>수주등록</li>
+      <li>출하요청</li>
+      <li>출하요청관리</li>
+      <li>출하등록</li>
+      <li>매출마감</li>
+    </ul>
+    <ul id="Purchase">
+      <span class="title">구매관리</span>
+      <li>구매단가</li>
+      <li>구매발주</li>
+      <li>구매입고</li>
+      <li>구매반품</li>
+      <li>매입마감</li>
+    </ul>
+    <ul id="Production">
+      <span class="title">생산관리</span>
+      <li></li>
+      <li>공정등록</li>
+      <li>라우팅등록</li>
+      <li>제조BOM</li>
+      <li>작업실적등록</li>
+      <li>작업실적수정</li>
+    </ul>
+  </nav>
+  
+  <aside>
+    <div id="notice">
+      <h1>공지사항</h1>
+      <p id="noticeText">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, illum minus recusandae tenetur corporis eveniet vero placeat consequuntur excepturi dolore laborum expedita non, omnis qui sint, perspiciatis voluptate harum magni?
+      </p>
+    </div>
+
+    <table class="Calendar">
+      <h1>달력</h1>
+      <thead>
+        <tr>
+          <td onclick="PrevCalender();" style="cursor:pointer;">&#60;</td>
+          <td colspan="5">
+            <sapn id="calYear"></sapn>년
+            <sapn id="calMonth"></sapn>월
+          </td>
+          <td onclick="nexrtCalendar();" style="cursor:pointer;">&#62;</td>
+        </tr>
+        <tr>
+          <td>일</td>
+          <td>월</td>
+          <td>화</td>
+          <td>수</td>
+          <td>목</td>
+          <td>금</td>
+          <td>토</td>
+        </tr>
+      </thead>
+    </table>
+  </aside>
+ </div>
+</body>
+</html>

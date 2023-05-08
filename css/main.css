@@ -1,0 +1,83 @@
+#wrap{
+  width: 100%;
+  height: auto;
+}
+
+nav{
+  width:20% ;
+  height: 100vh;
+  background-color: #022454;
+  color: white;
+  float: left;
+}
+.title{
+  font-size: 20px;
+  font-weight: 800;
+}
+#business,#Purchase,#Production{
+  margin-left: 40px;
+}
+
+li{
+  margin: 13px 0;
+}
+ul{
+  margin-top: 16px;
+}
+button{
+  width: 66px;
+  height: 24px;
+  font-size: 30px;
+  font-weight: 900;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  margin-top: 23px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+aside{
+  width: 80%;
+  height: 100vh;
+  background-color: aliceblue;
+  float: right;
+  display: flex;
+  justify-content: space-between;
+}
+/* 공지사항 */
+#notice{
+  margin-left: 45px;
+  margin-top:128px ;
+}
+#notice h1{
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 23px;
+}
+#noticeText{
+  width: 934px;
+  height: 700px;
+  background-color: #fff;
+  border-radius: 35px;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 달력 */
+.Calendar{
+  margin-left: 45px;
+  margin-top:128px ;
+  width: 934px;
+  height: 700px;
+  background-color: #fff;
+  border-radius: 35px;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.Calendar> h1{
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 23px;
+}
