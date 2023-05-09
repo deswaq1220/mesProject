@@ -134,7 +134,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr onclick="toggleCheckbox(this)">
               <td>1</td>
               <td>
                 <input type="checkbox" id="checkbox">
@@ -151,7 +151,7 @@
               <td>1,700</td>
               <td>18,700</td>
             </tr>
-            <tr>
+            <tr onclick="toggleCheckbox(this)">
               <td>2</td>
               <td>
                 <input type="checkbox" id="checkbox">
@@ -167,8 +167,8 @@
               <td>1,700</td>
               <td>18,700</td>
             </tr>
-            <tr>
-              <td>3</td>
+            <tr onclick="toggleCheckbox(this)">
+              <td >3</td>
               <td>
                 <input type="checkbox" id="checkbox">
               </td>
@@ -222,7 +222,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr onclick="changeColor(this)">
               <td>1</td>
               <td style="color:rgb(184, 0, 0)">미결</td>
               <td>SMFT0002</td>
@@ -288,7 +288,7 @@
     
         <div id="popUp_tableCheckWrap">
           <table id="popUp_tableCheck">
-            <tr class="tablerow">
+            <tr class="tablerow" onclick="toggleCheckbox(this)">
               <td class="inventory">회사</td>
               <td>
                 <select class="company">
@@ -396,7 +396,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr onclick="toggleCheckbox(this)">
                 <td>1</td>
                 <td>
                   <input type="checkbox" id="checkbox">
@@ -412,7 +412,7 @@
                 <td>90,000</td>
                 <td>990,000</td>
               </tr>
-              <tr>
+              <tr onclick="toggleCheckbox(this)">
                 <td>2</td>
                 <td>
                   <input type="checkbox" id="checkbox">
@@ -428,7 +428,7 @@
                 <td>46,750</td>
                 <td>514,250</td>
               </tr>
-              <tr>
+              <tr onclick="toggleCheckbox(this)">
                 <td>3</td>
                 <td>
                   <input type="checkbox" id="checkbox">
@@ -474,6 +474,7 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/download.js"></script>
+  <script src="js/click.js"></script>
  <script>
 
 $(document).ready(function() {
