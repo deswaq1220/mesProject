@@ -1,7 +1,11 @@
 function toggleCheckbox(row) {
   const checkbox = row.querySelector('input[type="checkbox"]');
   checkbox.checked = !checkbox.checked;
-  row.style.backgroundColor = checkbox.checked ? '#DDEAFD' : '#F2F3F4';
+  if (checkbox.checked) {
+    row.style.backgroundColor = '#DDEAFD';
+  } else {
+    row.style.backgroundColor = ''; // 기본값으로 돌아가도록 함
+  }
 }
 
 function changeColor(row) {

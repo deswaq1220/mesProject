@@ -23,7 +23,7 @@ function exportExcel(){
 
 var excelHandler = {
     getExcelFileName : function(){
-        return 'table-test.xlsx';	//파일명
+        return 'table.xlsx';	//파일명
     },
     getSheetName : function(){
         return 'Table Test Sheet';	//시트명

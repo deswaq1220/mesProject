@@ -1,16 +1,16 @@
 
-$(document).ready(function() {
+// $(document).ready(function() {
 
-  $("#contents").click(function() {
+//   $("#contents").click(function() {
 
-      $("#popup").fadeIn();
+//       $("#popup").fadeIn(100);
 
-  });
+//   });
 
-  $(".exit").click(function() {
+//   $(".exit").click(function() {
 
-      $("#popup").fadeOut();
+//       $("#popup").fadeOut(100);
 
-  });
+//   });
 
-});
+// });
