@@ -355,16 +355,18 @@ td{
   box-sizing: border-box;
 }
 
+#orderDetails table tfoot tr td:nth-child(2),
 #orderDetails table tfoot tr td:nth-child(3),
 #orderDetails table tfoot tr td:nth-child(4),
 #orderDetails table tfoot tr td:nth-child(5),
 #orderDetails table tfoot tr td:nth-child(6),
 #orderDetails table tfoot tr td:nth-child(7),
-#orderDetails table tfoot tr td:nth-child(8){
+#orderDetails table tfoot tr td:nth-child(8),
+#orderDetails table tfoot tr td:nth-child(9){
   border: none;
 }
 
-#orderDetails table tfoot tr td:nth-child(9){
+#orderDetails table tfoot tr td:nth-child(10){
   border-left: 1px solid white;
 }
 
@@ -386,7 +388,6 @@ td{
   float: right;
 
 }
-
 
 
 

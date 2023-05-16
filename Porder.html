@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>수주등록 </title>
+  <title>발주관리 </title>
   <!-- css -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/order.css">
+  <link rel="stylesheet" href="css/Porder.css">
   <link rel="stylesheet" href="css/popUpOrder.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
@@ -48,7 +48,7 @@
 
     <aside>
       <div class="topArea">
-        <h1> 수주등록</h1>
+        <h1>발주관리</h1>
         <div id="btnWrap">
           <button class="return">
             <svg xmlns="http://www.w3.org/2000/svg" width="17.303" height="16.221" viewBox="0 0 17.303 16.221">
@@ -57,8 +57,6 @@
             
           </button>
         <button class="check">조회</button>
-        <button class="new">신규</button>
-        <button class="retouch">수정</button>
         </div>
       </div>
 
@@ -75,11 +73,11 @@
               </select>
             </td>
   
-            <td class="inventory">수주일자</td>
+            <td class="inventory">등록일</td>
             <td><input type="date" class="datepicker"></td>
             <td>~</td>
             <td><input type="date" class="datepicker" id="picker"></td>
-            <td class="inventory">수주번호</td>
+            <td class="inventory">발주번호</td>
             <td>
               <input type="text">
             </td>
@@ -133,14 +131,14 @@
       
 
       <div id="orderList">
-        <h1> 수주 </h1>
+        <h1> 구매발주 </h1>
         <table id="orderData">
           <thead>
             <tr>
               <td></td>
               <td></td>
-              <td>수주일자</td>
-              <td>수주번호</td>
+              <td>P/O일자</td>
+              <td>P/O번호</td>
               <td>거래처</td>
               <td>사용자명</td>
               <td>통화</td>
@@ -149,6 +147,7 @@
               <td>공급가</td>
               <td>부가세</td>
               <td>합계</td>
+              <td>수정일</td>
             </tr>
           </thead>
           <tbody>
@@ -168,6 +167,7 @@
               <td>17,000</td>
               <td>1,700</td>
               <td>18,700</td>
+              <td>2023-05-14</td>
             </tr>
             <tr onclick="toggleCheckbox(this)">
               <td>2</td>
@@ -184,6 +184,7 @@
               <td>17,000</td>
               <td>1,700</td>
               <td>18,700</td>
+              <td>2023-05-14</td>
             </tr>
             <tr onclick="toggleCheckbox(this)">
               <td >3</td>
@@ -200,6 +201,7 @@
               <td>17,000</td>
               <td>1,700</td>
               <td>18,700</td>
+              <td>2023-05-14</td>
             </tr>
           </tbody>
           <tfoot>
@@ -216,23 +218,26 @@
               <td>17,000</td>
               <td>1,700</td>
               <td>18,700</td>
+              <td></td>
             </tr>
           </tfoot>
         </table>
       </div>
       <div id="orderDetails">
-        <h1> 수주상세 </h1>
+        <h1> 구매발주 상세 </h1>
         <table>
           <thead>
             <tr>
               <td></td>
+              <td>확정여부</td>
               <td>진행상태</td>
               <td>품목코드</td>
               <td>품목명</td>
               <td>규격</td>
               <td>납품예정일</td>
-              <td>기준단위</td>
-              <td>수량</td>
+              <td>납품창고</td>
+              <td>구매단위</td>
+              <td>발주수량</td>
               <td>단가</td>
               <td>공급가</td>
               <td>부가세</td>
@@ -242,13 +247,15 @@
           <tbody>
             <tr onclick="changeColor(this)">
               <td>1</td>
+              <td style="color:rgb(184, 0, 0)">미확정</td>
               <td style="color:rgb(184, 0, 0)">미결</td>
               <td>SMFT0002</td>
               <td>양배추즙</td>
               <td>파우치</td>
               <td>2023-05-15</td>
-              <td>EA</td>
-              <td>100</td>
+              <td>자재창고</td>
+              <td>KG</td>
+              <td>0</td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -262,6 +269,8 @@
               <td></td>
               <td></td>
               <td>합계</td>
+              <td></td>
+              <td></td>
               <td></td>
               <td></td>
               <td>100</td>
@@ -294,16 +303,16 @@
     
     <!-- 팝업영역입니당다랄당당당 -->
 
-<div id="popUP_wrap">
-  <div id="registrationWrap">
-    <div id="wrapper">
+    <div id="popUP_wrap">
+      <div id="registrationWrap">
+        <div id="wrapper">
           <div class="popupTopArea">
-            <h1> 수주등록</h1>
-              <div id="popUpBtnWrap">
-                <button class="save">저장</button>
-                <button class="close">닫기</button>
-              </div>
+          <h1> 수주등록</h1>
+          <div id="popUpBtnWrap">
+          <button class="save">저장</button>
+          <button class="close">닫기</button>
           </div>
+        </div>
     
         <div id="popUp_tableCheckWrap">
           <table id="popUp_tableCheck">
@@ -495,16 +504,13 @@
           </table>
         </div>
     </div>
-  </div>
-</div>
-    
 
 
 
  <!-- 스크립트 -->
  
   <script src="js/datapicker.js"></script>
-  <script src="js/popUP.js"></script>
+  <!-- <script src="js/popUP.js"></script> -->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="js/download.js"></script>
