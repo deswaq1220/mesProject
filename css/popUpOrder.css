@@ -133,6 +133,7 @@ textarea::-webkit-scrollbar-thumb{
   padding: 100px;
   box-sizing: border-box;
   display: none;
+  z-index: 2;
 }
 
 #registrationWrap{
@@ -230,9 +231,8 @@ input[type="text"]{
 }
 
 form{
-  height: 57px;
-  display: flex;
-  align-items: center;
+width: 100%;
+height: auto;
 }
 
 form input:nth-child(1){

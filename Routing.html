@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>수주등록 </title>
+  <title>라우팅등록배정 </title>
   <!-- css -->
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/order.css">
+  <link rel="stylesheet" href="css/Routing.css">
   <link rel="stylesheet" href="css/popUpOrder.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
@@ -16,7 +16,7 @@
 <body>
  <div id="wrap">
   <nav>
-    <button onclick="location.href='main.html'"></button>
+    <button onclick="location.href='main.html'">HOME</button>
     <ul id="business">
       <span class="title">영업관리</span>
       <li><a href="order.html">수주등록</a></li>
@@ -49,7 +49,7 @@
   <aside>
     <form class="orderForm">
     <div class="topArea">
-      <h1> 수주등록</h1>
+      <h1>라우팅등록배정</h1>
       <div id="btnWrap">
         <button class="return">
           <svg xmlns="http://www.w3.org/2000/svg" width="17.303" height="16.221" viewBox="0 0 17.303 16.221">
@@ -66,47 +66,49 @@
     <div id="tableCheckWrap">
       <table id="tableCheck">
         <tr class="tablerow">
-          <td class="inventory">회사</td>
+          <td class="inventory">공정명</td>
           <td>
             <select class="company">
-              <option value="select">회사명</option>
-              <option value="cupang">쿠팡</option>
-              <option value="Gmarket">지마켓</option>
-              <option value="11">11번가</option>
+              <option value="select">공정명</option>
+              <option value="cupang">추출</option>
+              <option value="Gmarket">실링</option>
+              <option value="11">포장</option>
             </select>
           </td>
 
-          <td class="inventory">수주일자</td>
-          <td><input type="date" class="datepicker"></td>
-          <td>~</td>
-          <td><input type="date" class="datepicker" id="picker"></td>
-          <td class="inventory">수주번호</td>
+          <td class="inventory">라우팅코드</td>
           <td>
             <input type="text">
           </td>
-        </tr>
-        <tr class="tablerow">
+          <td class="inventory">재작업여부</td>
+          <td>
+            <select class="drop">
+              <option value="select">재작업여부 Y/N</option>
+              <option value="cupang">N</option>
+              <option value="Gmarket">Y</option>
+            </select>
+          </td>
           <td class="inventory">품목</td>
           <td>
-
+              
             <select class="drop">
               <option value="select">품목</option>
-              <option value="cabbage">양배추즙</option>
-              <option value="garlic">흑마늘즙</option>
-              <option value="Pomegranate">석류젤리</option>
-              <option value="plum">매실젤리</option>
-            </select>
-
-          </td>
-          <td class="inventory">거래처</td>
-          <td>
-            <select class="drop">
-              <option value="select">거래처</option>
-              <option value="cupang">코드하우스</option>
+              <option value="cupang">몰라..모리겟다</option>
               <option value="Gmarket">하나로마트</option>
               <option value="Gmarket">에이농장</option>
               <option value="Gmarket">팔피엠</option>
             </select>
+          </td>
+
+          <td class="inventory">사용여부</td>
+          <td>
+
+            <select class="drop">
+              <option value="select">전체</option>
+              <option value="cabbage">미사용</option>
+              <option value="garlic">사용</option>
+            </select>
+
           </td>
         </tr>
       </table>
@@ -115,23 +117,23 @@
 
 
     <div id="orderList">
-      <h1> 수주 </h1>
+      <h1> 공정목록 </h1>
       <div class="table-container">
       <table id="orderData">
         <thead>
         <tr>
           <td></td>
           <td></td>
-          <td>수주일자</td>
-          <td>수주번호</td>
-          <td>거래처</td>
-          <td>사용자명</td>
-          <td>통화</td>
-          <td>부가세</td>
+          <td>라우팅코드</td>
+          <td>공정명</td>
+          <td>재작업</td>
+          <td>공정(수)</td>
           <td>품목(수)</td>
-          <td>공급가</td>
-          <td>부가세</td>
-          <td>합계</td>
+          <td>사용여부</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         </thead>
         <tbody>
@@ -140,317 +142,132 @@
           <td>
             <input type="checkbox" id="checkbox">
           </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
+          <td>RTN002</td>
+          <td>양배추 추출</td>
+          <td>N</td>
           <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
+          <td>7</td>
+          <td>사용</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
+          <td>1</td>
           <td>
             <input type="checkbox" id="checkbox">
           </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
+          <td>RTN002</td>
+          <td>양배추 추출</td>
+          <td>N</td>
           <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
+          <td>7</td>
+          <td>사용</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
+          <td>1</td>
           <td>
             <input type="checkbox" id="checkbox">
           </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
+          <td>RTN002</td>
+          <td>양배추 추출</td>
+          <td>N</td>
           <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
+          <td>7</td>
+          <td>사용</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
-        <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
-          <td>
-            <input type="checkbox" id="checkbox">
-          </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
-          <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
-        </tr>
-        <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
-          <td>
-            <input type="checkbox" id="checkbox">
-          </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
-          <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
-        </tr>
-        <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
-          <td>
-            <input type="checkbox" id="checkbox">
-          </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
-          <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
-        </tr>
-        <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
-          <td>
-            <input type="checkbox" id="checkbox">
-          </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
-          <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
-        </tr>
-        <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
-          <td>
-            <input type="checkbox" id="checkbox">
-          </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
-          <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
-        </tr>
-        <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
-          <td>
-            <input type="checkbox" id="checkbox">
-          </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
-          <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
-        </tr>
-        <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
-          <td>
-            <input type="checkbox" id="checkbox">
-          </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
-          <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
-        </tr>
-        <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
-          <td>
-            <input type="checkbox" id="checkbox">
-          </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
-          <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
-        </tr>
-        <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
-          <td>
-            <input type="checkbox" id="checkbox">
-          </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
-          <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
-        </tr>
-        <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
-          <td>
-            <input type="checkbox" id="checkbox">
-          </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
-          <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
-        </tr>
-        <tr onclick="toggleCheckbox(this)">
-          <td>2</td>
-          <td>
-            <input type="checkbox" id="checkbox">
-          </td>
-          <td>2023-05-04</td>
-          <td>SM2305040001</td>
-          <td>코드하우스</td>
-          <td>변경원</td>
-          <td>KRW</td>
-          <td>적용</td>
-          <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
-        </tr>
-
-
         </tbody>
-        <tfoot>
+        <!-- <tfoot>
         <tr>
           <td></td>
           <td></td>
           <td></td>
           <td></td>
-          <td>합계</td>
           <td></td>
           <td></td>
           <td></td>
-          <td>1</td>
-          <td>17,000</td>
-          <td>1,700</td>
-          <td>18,700</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
-        </tfoot>
+        </tfoot> -->
       </table>
         </div>
     </div>
+
     <div id="orderDetails">
-      <h1> 수주상세 </h1>
+      <form class="orderForm">
+        <button class="routingBtn" type="button">라우팅절차</button>
+        <button class="routingBtn" type="button">라우팅품목</button>
       <div class="table-container">
       <table id="DetailsData">
         <thead class="orderData">
         <tr>
           <td></td>
-          <td>진행상태</td>
-          <td>품목코드</td>
-          <td>품목명</td>
-          <td>규격</td>
-          <td>납품예정일</td>
-          <td>기준단위</td>
-          <td>수량</td>
-          <td>단가</td>
-          <td>공급가</td>
-          <td>부가세</td>
-          <td>합계</td>
+          <td>공정#</td>
+          <td>공정</td>
+          <td>후공정#</td>
+          <td>워크센터</td>
+          <td>거래처</td>
+          <td>실적여부</td>
+          <td>최종여부</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         </thead>
         <tbody>
         <tr onclick="changeColor(this)">
           <td>1</td>
-          <td style="color:rgb(184, 0, 0)">미결</td>
-          <td>SMFT0002</td>
-          <td>양배추즙</td>
-          <td>파우치</td>
-          <td>2023-05-15</td>
-          <td>EA</td>
-          <td>100</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-        </tr>
-       <tr onclick="changeColor(this)">
           <td>1</td>
-          <td style="color:rgb(184, 0, 0)">미결</td>
-          <td>SMFT0002</td>
-          <td>양배추즙</td>
-          <td>파우치</td>
-          <td>2023-05-15</td>
-          <td>EA</td>
-          <td>100</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
+          <td>양배추즙 생산</td>
+          <td>1</td>
+          <td>에이농장</td>
+          <td>N</td>
+          <td style="color:rgb(184, 0, 0)">N</td>
+          <td style="color:rgb(0, 4, 255)">Y</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
         </tbody>
-        <tfoot>
+        <!-- <tfoot>
         <tr>
           <td></td>
           <td></td>
           <td></td>
           <td></td>
-          <td>합계</td>
           <td></td>
           <td></td>
-          <td>100</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
-        </tfoot>
+        </tfoot> -->
       </table>
         </div>
+      </form>
       <button id="fileSave">엑셀저장</button>
     </div>
+    
+
+    
   </aside>
 
 </div>

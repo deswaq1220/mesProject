@@ -2,6 +2,16 @@
   font-weight: 700;
 }
 
+.table-container {
+  max-height: 500px;
+  overflow-y: auto;
+}
+.orderData thead{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 aside{
   width: 80%;
   float: right;
@@ -124,14 +134,14 @@ input[type="text"]{
 }
 
 form{
-  height: 57px;
-  display: flex;
-  align-items: center;
+ width: 100%;
+ height: auto;
 }
 
 form input:nth-child(1){
   margin-left:0;
 }
+
 
 
 .datepicker{
@@ -241,8 +251,7 @@ td{
 
 #orderList table tbody td:nth-child(9),
 #orderList table tbody td:nth-child(10),
-#orderList table tbody td:nth-child(11),
-#orderList table tbody td:nth-child(12)
+#orderList table tbody td:nth-child(11)
 {
   text-align: right;
   padding: 12px;
@@ -280,16 +289,15 @@ td{
 
 #orderList table tfoot tr td:nth-child(9),
 #orderList table tfoot tr td:nth-child(10),
-#orderList table tfoot tr td:nth-child(11),
-#orderList table tfoot tr td:nth-child(12){
+#orderList table tfoot tr td:nth-child(11){
   text-align: right;
 }
 /* 수주 테이블 끝 */
 
 /* 수주상세 테이블 시작 */
 #orderDetails{
-  width: 95%;
-  margin: 10px 45px 0 45px;
+  width: 100%;
+  margin-top: 10px;
 
 }
 
@@ -328,10 +336,10 @@ td{
   background-color: #F2F3F4;
 }
 
+#orderDetails table tbody td:nth-child(8),
 #orderDetails table tbody td:nth-child(9),
 #orderDetails table tbody td:nth-child(10),
-#orderDetails table tbody td:nth-child(11),
-#orderDetails table tbody td:nth-child(12)
+#orderDetails table tbody td:nth-child(11)
 {
   text-align: right;
   padding: 12px;
@@ -355,23 +363,28 @@ td{
   box-sizing: border-box;
 }
 
+#orderDetails table tfoot tr td:nth-child(2),
 #orderDetails table tfoot tr td:nth-child(3),
 #orderDetails table tfoot tr td:nth-child(4),
 #orderDetails table tfoot tr td:nth-child(5),
 #orderDetails table tfoot tr td:nth-child(6),
 #orderDetails table tfoot tr td:nth-child(7),
-#orderDetails table tfoot tr td:nth-child(8){
+#orderDetails table tfoot tr td:nth-child(12),
+#orderDetails table tfoot tr td:nth-child(13)
+
+{
   border: none;
 }
 
-#orderDetails table tfoot tr td:nth-child(9){
+#orderDetails table tfoot tr td:nth-child(8),
+#orderDetails table tfoot tr td:nth-child(10){
   border-left: 1px solid white;
 }
 
+#orderDetails table tfoot tr td:nth-child(8),
 #orderDetails table tfoot tr td:nth-child(9),
 #orderDetails table tfoot tr td:nth-child(10),
-#orderDetails table tfoot tr td:nth-child(11),
-#orderDetails table tfoot tr td:nth-child(12){
+#orderDetails table tfoot tr td:nth-child(11){
   text-align: right;
 }
 

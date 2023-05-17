@@ -1,6 +1,15 @@
 #business li:nth-child(2){
   font-weight: 700;
 }
+.table-container {
+  max-height: 500px;
+  overflow-y: auto;
+}
+#orderData thead{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 
 aside{
   width: 80%;
@@ -124,9 +133,8 @@ input[type="text"]{
 }
 
 form{
-  height: 57px;
-  display: flex;
-  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
 form input:nth-child(1){
