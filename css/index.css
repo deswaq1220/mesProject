@@ -75,6 +75,9 @@ button:hover{
 
 #logoImg{
   width: 500px;
-  height: 500px;
-  background-image: url("");
+  height: 350px;
+  background-image: url(/img/스크린샷_2023-05-18_100003-removebg-preview.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

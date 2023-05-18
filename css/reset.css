@@ -43,3 +43,7 @@ body::-webkit-scrollbar-thumb{
   background-clip: padding-box;
   border: 2px solid transparent;
 }
+
+.table-container{
+  box-shadow: 1px 2px 5px #e3e3e3;
+}

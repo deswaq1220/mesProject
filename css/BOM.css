@@ -461,6 +461,12 @@ td{
 
 }
 
+.addBtn:hover,.deleteBtn:hover,.routingBtn:hover{
+  background-color: #022454;
+  color: white;
+  box-shadow: 1px 2px 5px #989898;
+}
+
 
 
 
